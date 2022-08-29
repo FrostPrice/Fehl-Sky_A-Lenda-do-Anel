@@ -1,23 +1,44 @@
 // Esse arquivo vai conter as funções gerais de funcionalidade do jogo (como por exemplo, começar jogo)
 #include <iostream>
-#include <fstream>
 using namespace std;
+
+#include "player.cpp"
 
 class Sistemas
 {
-    void menu_principal()
+public:
+    void comeca_jogo()
     {
-        cout << "Bem-Vindo ao\n";
+        ler_csv("db/db.csv");
+        if (menu_principal())
+        {
+            Player jogador;
+            jogador.criacao_player();
+        };
     };
 
-public:
-    void ler_db_csv()
+    bool menu_principal()
     {
-        ifstream db;
-        db.open("db.csv", ios_base::in);
+        cout << "Bem-Vindo ao...\n\n";
+        cout << "Fehl Sky - A Lenda do Anel\n\n";
 
-        // TODO: Ler dados do db.csv e retonar as informações relevantes
+        int input_usuario;
+        input_usuario = solicita_input_usuario("- Aperte 1 para começar o jogo\n- Aperte 2 para sair do jogo\n", 1, 2);
 
-        db.close();
+        switch (input_usuario)
+        {
+        case 1:
+            cout << "Começando jogo...\n";
+            return true;
+            break;
+        case 2:
+            cout << "Saindo do jogo...\n";
+            return false;
+            break;
+        default:
+            cout << "Error!!! Start Panicking";
+            return false;
+            break;
+        };
     };
 };

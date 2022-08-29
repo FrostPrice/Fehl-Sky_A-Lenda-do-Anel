@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#include "config.h"
+#include "../headers/config.h"
 
 class Player
 {
@@ -11,6 +11,7 @@ class Player
     int vitalidade, forca, stamina, mana, inteligencia, sorte;
     int arma, armadura, inventario[PLAYER_LIMITE_INVENTARIO];
 
+public:
     void criacao_player()
     {
         cout << "Digite o nome do Herói da história: ";
