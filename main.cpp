@@ -1,15 +1,19 @@
 #include <locale.h>
-using namespace std;
+#include <time.h>
 
-#include "headers/componentes.h" // Define globalmente todas as funções comuns
-#include "src/sistemas.cpp"
+#include "Headers/Sistemas.h"
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
+    srand(time(NULL));
 
     Sistemas sistema;
-    sistema.comeca_jogo();
+
+    do
+    {
+        sistema.menu_principal();
+    } while (sistema.get_jogando());
 
     return 0;
 }

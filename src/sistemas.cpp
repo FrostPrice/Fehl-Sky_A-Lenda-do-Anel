@@ -1,44 +1,61 @@
-// Esse arquivo vai conter as funções gerais de funcionalidade do jogo (como por exemplo, começar jogo)
 #include <iostream>
-using namespace std;
+#include <iomanip>
 
-#include "player.cpp"
+#include "../Headers/Funcoes.h"
+#include "../Headers/Sistemas.h"
+#include "./player.cpp"
 
-class Sistemas
+Sistemas::Sistemas()
 {
-public:
-    void comeca_jogo()
+    escolha = 0;
+    jogando = true;
+}
+
+// Métodos
+void Sistemas::menu_principal()
+{
+    system("clear"); // Mudar comando de acordo com OS. Para windows é cls
+    cout << "+--------------------------------------+\n";
+    cout << "|           Bem-Vindo ao...            |\n";
+    cout << "|                                      |\n";
+    cout << "|      Fehl Sky - A Lenda do Anel      |\n";
+    cout << "|                                      |\n";
+    cout << "+--------------------------------------+\n";
+    cout << endl;
+    cout << "+--------------------------------------+\n";
+    cout << "| - Aperte 1 para começar o jogo       |\n";
+    cout << "| - Aperte 2 para sair do jogo         |\n";
+    cout << "+--------------------------------------+\n";
+    cout << endl;
+    int input_usuario;
+    input_usuario = solicita_input_usuario("Escolha: ", 1, 2);
+
+    switch (input_usuario)
     {
-        ler_csv("db/db.csv");
-        if (menu_principal())
-        {
-            Player jogador;
-            jogador.criacao_player();
-        };
+    case 1:
+        cout << "Começando jogo...\n\n";
+        jogando = true;
+        comeca_jogo();
+
+        break;
+    case 2:
+        cout << "Saindo do jogo...\n";
+        jogando = false;
+
+        break;
+    default:
+        cout << "Error... Entre em Pânico!!!\n";
+        cout << "O anel foi perdido";
+        jogando = false;
+
+        break;
     };
+};
 
-    bool menu_principal()
-    {
-        cout << "Bem-Vindo ao...\n\n";
-        cout << "Fehl Sky - A Lenda do Anel\n\n";
-
-        int input_usuario;
-        input_usuario = solicita_input_usuario("- Aperte 1 para começar o jogo\n- Aperte 2 para sair do jogo\n", 1, 2);
-
-        switch (input_usuario)
-        {
-        case 1:
-            cout << "Começando jogo...\n";
-            return true;
-            break;
-        case 2:
-            cout << "Saindo do jogo...\n";
-            return false;
-            break;
-        default:
-            cout << "Error!!! Start Panicking";
-            return false;
-            break;
-        };
-    };
+void Sistemas::comeca_jogo()
+{
+    Player jogador;
+    jogador.criacao_player();
+    // Caminhos caminho;
+    // caminho.inicio();
 };
