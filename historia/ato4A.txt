@@ -1,0 +1,19 @@
+[Taverna - Novigrad - Peninsula de Morrowind]
+
++-----------------------------------------------------------------------+
+
+Ao chegar na taverna, você pede uma bebida e conversa com o Eddard Stark, o dono da Taverna.
+Após isso você mostra o mapa que representava uma ilha de formato anelar,
+imediatamente o dono da taverna reconhece a ilha e conta a você que o mapa representa a locilização da Ilha do Anel,
+localizada do Arquipélago de Skellige, onde o mesmo nasceu e fugiu quando era criança por ser uma terra sem lei,
+onde o poder é a base de tudo.
+
+Em seguida o você pergunta pra ele a melhor maneira de chegar na ilha,
+e ele lhe responde "Os únicos que possuem a moeda do barqueiro, na qual um lobo é gravada em suas faces são dignos de uma passagem direta para essa ilha. "
+Você mostra a moeda para o taverneiro e ele lhe consegue uma vaga em um navio cheio de piratas e lhe deseja boa sorte.
+
+Após 3 dias de navegação, o capitão do navio Sir Aegon Targaryen lhe avisa que eles não iriam se aproximar mais da ilha por que trazia má sorte, e ele lhe concederia um barco para chegar lá sozinho.
+Chegando na ilha você busca por comida e água e percebe uma instalação rochosa no coração da ilha e você sente uma energia familiar e se aproxima da construção.
+
+1- Entrar na Instalação Rochosa.
++-----------------------------------------------------------------------+

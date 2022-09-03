@@ -1,0 +1,13 @@
+[Castelo Abandonado - Floresta de Olismore]
+
++-----------------------------------------------------------------------+
+Chegando no Castelo Abandonado, você percebe que ele foi palco de uma das maiores guerras do Reino.
+A Guerra de AllWood, onde os magos mais poderosos da região se encontravam e faziam reuniões estratégicas,
+o mago que destriu sua vila, era um deles.
+
+Após explorar os aposentos dos magos, você encontra uma nota, que dizia:
+- " Encontre-me em Xario grande mestre, estou lhe esperando, precisamos matar esse monstro logo, as pessoas estão desaparecendo. ".
+Porém quando você olha pra trás, há um ladrão de túmulos com uma foice lhe olhando e pedindo seus pertences e então você:
+
+1- Iniciar o combate.
++-----------------------------------------------------------------------+

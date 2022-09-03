@@ -1,20 +1,22 @@
 #ifndef PLAYER_H // Se o arquivo não está definido. Usado para impedir conflito de arquivos
 #define PLAYER_H
 
+#include "./Inventario.h"
+
 class Player
 {
 private:
     string nome;
     string classe;
-    // int nivel, exp; //  TODO:  Talvez adicionar isso
     int vitalidade, forca, stamina, inteligencia, sorte;
-    int arma, defesa, inventario[10];
+    int dano, defesa;
+    Inventario inventario;
 
 public:
     Player();
 
     // Métodos
-    void criacao_player(); // TODO: talvez adicionar o level como parâmetro
+    void criacao_player();
 
     // Getters
     // region: Atributos do Personagem
@@ -46,9 +48,9 @@ public:
     {
         return sorte;
     };
-    int get_arma()
+    int get_dano()
     {
-        return arma;
+        return dano;
     };
     int get_defesa()
     {
@@ -59,7 +61,7 @@ public:
     // Setters
     void set_nome(string nome)
     {
-        nome = nome;
+        this->nome = nome;
     };
 };
 

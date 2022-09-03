@@ -1,0 +1,21 @@
+[Praça Centra - Novigrad - Península de Morrowind]
+
++-----------------------------------------------------------------------+
+Chegando na praça, como de costume, você segue em direção ao mural de informações.
+
+Mas antes disso, um mercador chamado Khajiit te interrompe.
+
+- Você é novo na cidade? Claro que é, Khajiit conhece todos e tudo o que acontece aqui nesta praça.
+- Surpreso pela interação do Khajiit, você responde: O que você quer?
+- Khajiit? Nada! Apenas quero te ajudar, posso te dizer sobre qualquer coisa, desde que tenha as moedas para isso.
+- Que tipo de informações possui? - Você pergunta.
+- Sobre tudo e todos. Até sobre um herói querendo vingar sua família.
+- O que você sabe? - Você pergunta enquanto entrega as moedas para ele.
+- Numa ilha anelar você encontrara o caos e a loucura, mas chegar até lá ninguém ousa. A não ser que você use um barco de alguém corajoso o suficiente para ir em direção a ilha.
+- E quem pode me levar até lá?
+- Khajiit não falará mais sobre o assunto. Mas sua carona está saindo da praça. O mercador fala enquanto um grupo de bandidos sequestra uma garota da praça.
+ 
+Então, você decide sair da praça e seguir os bandidos.
+
+1. Continuar.
++-----------------------------------------------------------------------+

@@ -1,0 +1,11 @@
+[Aldeia de Hucaster - Vale de Flenburg]
+
++-----------------------------------------------------------------------+
+Ao chegar em Hucaster nosso Herói visita a praça central da aldeia e pergunta aos comerciantes sobre o paradeiro de um certo indivíduo.
+E ao conversar com os demais comerciantes e residentes nosso Herói descobre que há 2 informações sobre o paradeiro do Mago: O Templo de Eysall,
+localizado no topo da montanha do Norte de Winterfell ou A fortaleza de Krirwell, no coração da Floresta de Olismore.
+
+1. Ir para o Templo de Eysallr
+2. Ir para a fortaleza de Krirwell
++-----------------------------------------------------------------------+
+

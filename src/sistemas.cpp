@@ -4,10 +4,10 @@
 #include "../Headers/Funcoes.h"
 #include "../Headers/Sistemas.h"
 #include "./player.cpp"
+#include "./caminhos.cpp"
 
 Sistemas::Sistemas()
 {
-    escolha = 0;
     jogando = true;
 }
 
@@ -34,7 +34,6 @@ void Sistemas::menu_principal()
     {
     case 1:
         cout << "Começando jogo...\n\n";
-        jogando = true;
         comeca_jogo();
 
         break;
@@ -56,6 +55,6 @@ void Sistemas::comeca_jogo()
 {
     Player jogador;
     jogador.criacao_player();
-    // Caminhos caminho;
-    // caminho.inicio();
+    Caminhos caminho;
+    caminho.inicio(jogador);
 };

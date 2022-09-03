@@ -1,0 +1,24 @@
+[Aldeia de Crulwood - Vale de Flenburg]
+
++-----------------------------------------------------------------------+
+O Herói, nascido em Crulwood, uma pequena aldeia no meio do vale de Flenburg.
+Ao caminhar na centro da vila, acostumado a sempre olhar no mural de contratos,
+ele encontra um contrato contendo informações sobre o paradeiro de um Mago que transformou sua aldeia em ruinas, matando seus pais...
+
+- " Há 10 anos atrás um Mago conhecido da região, precisou de uma grande fonte de poder
+para afastar os invasores inimigos do país vizinho de Darmax,
+que estavam querendo conquistar a região há décadas.
+O Mago com a responsabilidade de proteger a região se apodera de um certo artefato proíbido,
+e obliterou todos os inimigos com uma certa facilidade.
+Porém com o passar do tempo, o Mago cada vez mais ficava dependente do artefato,
+sua mudança de humor e de honra era extremamente notável.
+Um dia o Mago foi convocado para prestar explicações sobre o artefato, e lhe foi sugerido se desfaze-lo do mesmo,
+porém o Mago já corrompido pelo poder inimaginável do artefato se recusa a entregá-lo ao chefe da aldeia e usa o poder contra seu próprio povo,
+causando uma destruição em massa da população e da aldeia. "
+
+Lembrando do acontecido e cheio de ódio, você aceita o contrato e parte para sua missão de derrotar o Mago e vingar sua familia.
+
+Ao conversar com o indivíduo que postou o contrato, você percebe que seu primeiro paradeiro é na cidade vizinha de Hucaster... E assim você começa sua jornada!
+
+1. Continuar.
++-----------------------------------------------------------------------+
