@@ -1,9 +1,9 @@
 using namespace std;
 #include <iostream>
 
-#include "../Headers/Funcoes.h"
+#include "../Headers/Helpers.h"
 #include "../Headers/Player.h"
-#include "./inventario.cpp"
+#include "../Headers/Inventario.h"
 
 Player::Player()
 {
@@ -37,7 +37,7 @@ void Player::criacao_player()
     cout << "|  3 - Arqueiro -> Especialista em combate a distância  |\n";
     cout << "+-------------------------------------------------------+\n";
     int input_usuario;
-    input_usuario = solicita_input_usuario("Digite 1, 2 ou 3: ", 1, 3);
+    input_usuario = Helpers::solicita_input_usuario("Digite 1, 2 ou 3: ", 3);
 
     inventario.inicializa();
 

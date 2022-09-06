@@ -2,7 +2,7 @@
 #ifndef INVENTARIO_H // Se o arquivo não está definido. Usado para impedir conflito de arquivos
 #define INVENTARIO_H
 
-#include "./Item.h"
+#include "Item.h"
 
 class Inventario
 {

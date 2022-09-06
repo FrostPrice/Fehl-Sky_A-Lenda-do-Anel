@@ -1,6 +1,9 @@
 #include "../Headers/Inventario.h"
 #include "./item.cpp"
 
+using namespace std;
+#include <iostream>
+
 Inventario::Inventario()
 {
     capacidade = 10;

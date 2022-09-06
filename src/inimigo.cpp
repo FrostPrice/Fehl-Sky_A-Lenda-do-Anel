@@ -8,13 +8,13 @@ Inimigo::Inimigo()
     forca = 0;
     stamina = 0;
     inteligencia = 0;
-    sorte = 4;
+    sorte = 3;
     dano = 0;
     defesa = 0;
 };
 
 // Métodos
-void Inimigo::spawnar_inimigo()
+void Inimigo::spawnar_inimigo_aleatorio()
 {
     switch (1 + rand() % 3)
     {
@@ -48,10 +48,28 @@ void Inimigo::spawnar_inimigo()
 void Inimigo::spawnar_mago()
 {
     nome = "Midir";
-    vitalidade = 6;
+    vitalidade = 10;
     forca = 2;
     stamina = 6;
     inteligencia = 10;
+};
+
+void Inimigo::spawnar_ladrao_de_tumulos()
+{
+    nome = "Ladrão de Túmulos";
+    vitalidade = 6;
+    forca = 4;
+    stamina = 10;
+    inteligencia = 2;
+};
+
+void Inimigo::spawnar_bandido_chefe()
+{
+    nome = "Rato";
+    vitalidade = 10;
+    forca = 4;
+    stamina = 2;
+    inteligencia = 0;
 };
 
 void Inimigo::spawnar_golem()

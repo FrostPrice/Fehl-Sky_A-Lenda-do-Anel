@@ -2,6 +2,23 @@
   "files.associations": {
     "*.py": "python",
     "iostream": "cpp",
-    "iosfwd": "cpp"
-  }
+    "iosfwd": "cpp",
+    "fstream": "cpp",
+    "chrono": "cpp",
+    "variant": "cpp",
+    "ostream": "cpp",
+    "string": "cpp"
+  },
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "Example",
+      "database": "FIRST_DB",
+      "username": "postgres"
+    }
+  ]
 }

@@ -2,7 +2,7 @@
 #include <time.h>
 #include <cstdlib> // Para importar rand e srand
 
-#include "Headers/Sistemas.h"
+#include "./Headers/Sistemas.h"
 
 int main()
 {

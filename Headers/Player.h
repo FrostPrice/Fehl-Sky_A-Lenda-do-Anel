@@ -1,7 +1,10 @@
 #ifndef PLAYER_H // Se o arquivo não está definido. Usado para impedir conflito de arquivos
 #define PLAYER_H
 
-#include "./Inventario.h"
+using namespace std;
+#include <string>
+
+#include "Inventario.h"
 
 class Player
 {
@@ -19,7 +22,6 @@ public:
     void criacao_player();
 
     // Getters
-    // region: Atributos do Personagem
     string get_nome()
     {
         return nome;
@@ -56,12 +58,15 @@ public:
     {
         return defesa;
     };
-    // endregion: Atributos do Personagem
 
     // Setters
-    void set_nome(string nome)
+    void set_nome(string novo_nome)
     {
-        this->nome = nome;
+        nome = novo_nome;
+    };
+    void set_vitalidade(int nova_vitalidade)
+    {
+        vitalidade = nova_vitalidade;
     };
 };
 

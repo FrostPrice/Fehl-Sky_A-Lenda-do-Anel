@@ -1,10 +1,10 @@
 #include <iostream>
 #include <iomanip>
 
-#include "../Headers/Funcoes.h"
+#include "../Headers/Helpers.h"
 #include "../Headers/Sistemas.h"
-#include "./player.cpp"
-#include "./caminhos.cpp"
+#include "../Headers/Player.h"
+#include "../Headers/Caminhos.h"
 
 Sistemas::Sistemas()
 {
@@ -28,7 +28,7 @@ void Sistemas::menu_principal()
     cout << "+--------------------------------------+\n";
     cout << endl;
     int input_usuario;
-    input_usuario = solicita_input_usuario("Escolha: ", 1, 2);
+    input_usuario = Helpers::solicita_input_usuario("Escolha: ", 2);
 
     switch (input_usuario)
     {
@@ -56,5 +56,5 @@ void Sistemas::comeca_jogo()
     Player jogador;
     jogador.criacao_player();
     Caminhos caminho;
-    caminho.inicio(jogador);
+    caminho.historia(jogador);
 };

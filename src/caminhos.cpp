@@ -1,223 +1,116 @@
-#include "../Headers/Funcoes.h"
+#include "../Headers/Helpers.h"
 #include "../Headers/Player.h"
 #include "../Headers/Caminhos.h"
+#include "../Headers/Inimigo.h"
+#include "../Headers/Combate.h"
 
-#include "inimigo.cpp"
-
-Caminhos::Caminhos(){};
+Caminhos::Caminhos()
+{
+    caminho_atual = 1;
+    int index_caminhos_possiveis[14][3];
+    string caminhos_possiveis[14];
+};
 
 // Métodos
-void Caminhos::inicio(Player jogador)
+void Caminhos::historia(Player jogador)
 {
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato1.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
+    Combate combate;
+    int proximos_caminhos[2];
+    do
+    {
+        define_proximos_caminhos(proximos_caminhos);
+        set_caminho_atual(define_caminho(proximos_caminhos[0], proximos_caminhos[1]));
+        // Adicionar combate contra os bosses e inimigos aleatórios
+        Inimigo inimigo;
 
-    ato_2(jogador);
+        // Bosses
+        switch (caminho_atual)
+        {
+        case 4:
+            inimigo.spawnar_mago();
+            combate.combate(jogador, inimigo);
+
+            break;
+        case 6:
+            inimigo.spawnar_ladrao_de_tumulos();
+            combate.combate(jogador, inimigo);
+            break;
+        case 10:
+            inimigo.spawnar_bandido_chefe();
+            combate.combate(jogador, inimigo);
+            break;
+        case 13:
+            inimigo.spawnar_chefao_final();
+            combate.combate(jogador, inimigo);
+            break;
+        }
+
+    } while (caminho_atual > 0 && caminho_atual <= 14);
 };
 
-void Caminhos::ato_2(Player jogador)
+string Caminhos::pesquisa_caminho_atual()
 {
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato2.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1-2]: ", 1, 2);
+    for (int i = 0; i < 14; i++)
+    {
+        int index_local;
+        index_local = index_caminhos_possiveis[i][0];
+
+        if (caminho_atual == index_local)
+        {
+            return caminhos_possiveis[i];
+        }
+    }
+
+    return caminhos_possiveis[0]; // Para evitar função sem retorno, esse item serve como uma segurança, retornando o jogador pro início da hostória
+};
+
+int Caminhos::define_caminho(int proximo_caminho_1, int proximo_caminho_2)
+{
+    int escolha_usuario, max_input_numero;
+    string mensagem_input;
+
+    if (proximo_caminho_2 == 0)
+    {
+        mensagem_input = "Escolha [1]: ";
+        max_input_numero = 1;
+    }
+    else
+    {
+        mensagem_input = "Escolha [1-2]: ";
+        max_input_numero = 2;
+    }
+
+    Helpers::ler_arquivo_inteiro("historia/ato" + pesquisa_caminho_atual() + ".txt");
+    escolha_usuario = Helpers::solicita_input_usuario(mensagem_input, max_input_numero);
 
     switch (escolha_usuario)
     {
     case 1:
-        ato_3_a(jogador);
+        return proximo_caminho_1;
         break;
-
     case 2:
-        ato_3_b(jogador);
+        return proximo_caminho_2;
         break;
-    }
+    default:
+        cout << "Isso não era pra acontecer :(";
+        return 1;
+        break;
+    };
 };
 
-void Caminhos::ato_3_a(Player jogador)
+void Caminhos::define_proximos_caminhos(int proximos_caminhos[2])
 {
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato3A.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
+    for (int i = 0; i < 14; i++)
     {
-    case 1:
-        ato_3_a_boss(jogador);
-        break;
+        int index_local;
+        index_local = index_caminhos_possiveis[i][0];
+
+        if (caminho_atual == index_local)
+        {
+            for (int j = 1; j < 3; j++)
+            {
+                proximos_caminhos[j - 1] = index_caminhos_possiveis[i][j];
+            }
+        }
     }
 };
-
-void Caminhos::ato_3_a_boss(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato3ABoss.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1-2]: ", 1, 2);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_4_a(jogador);
-        break;
-    case 2:
-        ato_4_b(jogador);
-        break;
-    }
-};
-
-void Caminhos::ato_3_b(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato3B.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1-2] ", 1, 2);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_4_b(jogador);
-        break;
-
-    case 2:
-        ato_3_b_boss(jogador);
-        break;
-    }
-};
-
-void Caminhos::ato_3_b_boss(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato3BBoss.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_4_b(jogador);
-        break;
-    };
-}
-void Caminhos::ato_4_a(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato4A.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1-2]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_final(jogador);
-        break;
-    }
-};
-
-void Caminhos::ato_4_b(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato4B.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_5_a(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_4_c(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato4C.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_5_b(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_5_a(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato5A.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_5_a_boss(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_5_a_boss(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato5ABoss.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_final(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_5_b(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato5B.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_5_b_boss(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_5_b_boss(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/ato5BBoss.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_final(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_final(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/batalhafinal.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        ato_epilogo(jogador);
-        break;
-    };
-}
-
-void Caminhos::ato_epilogo(Player jogador)
-{
-    int escolha_usuario;
-    ler_texto_de_arquivo("historia/epilogo.txt");
-    escolha_usuario = solicita_input_usuario("O que você quer fazer? [1]: ", 1, 1);
-
-    switch (escolha_usuario)
-    {
-    case 1:
-        system("clear");
-        cout << "Você Finalizou o jogo!\n";
-    };
-}
