@@ -1,4 +1,3 @@
-
 #include "../Headers/Item.h"
 
 Item::Item()
@@ -8,27 +7,8 @@ Item::Item()
 };
 
 // Métodos
-// TODO: Refatorar
-void Item::excalibur()
+void Item::pocao_cura()
 {
-    nome = "Excalibur";
+    nome = "Poção de Cura";
     valor = 6;
-};
-
-void Item::cajado()
-{
-    nome = "Staff Of Ring";
-    valor = 6;
-};
-
-void Item::arco()
-{
-    nome = "Legolla's Bow";
-    valor = 6;
-};
-
-void Item::anel()
-{
-    nome = "Fehl Sky's Anel";
-    valor = 100;
 };

@@ -12,7 +12,7 @@ using namespace std;
 class Helpers
 {
 public:
-    static int solicita_input_usuario(string mensagem, int maior_valor) // o static permite tornar a função Global, acessada usando NomeClasse::funcão()
+    static int solicita_input_usuario(string mensagem, int maior_valor) // o static permite tornar a função Global sem que haja a necessidade de instanciar a classe, acessada usando NomeClasse::funcão()
     {
         int input_usuario;
         do
@@ -24,7 +24,7 @@ public:
         return input_usuario;
     };
 
-    static void ler_arquivo_inteiro(string caminho_arquivo) // o static permite tornar a função Global, acessada usando NomeClasse::funcão()
+    static void ler_arquivo_inteiro(string caminho_arquivo) // o static permite tornar a função Global sem que haja a necessidade de instanciar a classe, acessada usando NomeClasse::funcão()
     {
         ifstream arquivo;
 

@@ -21,7 +21,7 @@ void Inimigo::spawnar_inimigo_aleatorio()
     case 1:
         nome = "Jorjião";
         vitalidade = 10;
-        forca = 7;
+        forca = 4;
         stamina = 5;
         inteligencia = 2;
 
@@ -29,7 +29,7 @@ void Inimigo::spawnar_inimigo_aleatorio()
     case 2:
         nome = "Cleytin";
         vitalidade = 6;
-        forca = 2;
+        forca = 3;
         stamina = 6;
         inteligencia = 10;
 
@@ -49,7 +49,7 @@ void Inimigo::spawnar_mago()
 {
     nome = "Midir";
     vitalidade = 10;
-    forca = 2;
+    forca = 3;
     stamina = 6;
     inteligencia = 10;
 };
@@ -67,7 +67,7 @@ void Inimigo::spawnar_bandido_chefe()
 {
     nome = "Rato";
     vitalidade = 10;
-    forca = 4;
+    forca = 5;
     stamina = 2;
     inteligencia = 0;
 };

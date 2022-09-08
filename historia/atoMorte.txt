@@ -1,0 +1,9 @@
+[Fim - Morte]
+
++-----------------------------------------------------------------------+
+Apesar de todos os seus esforços, você foi derotado.
+
+O mistério do Mago ainda não será resolvido, e provavel que nunca será.
+
+1. Finalizar Jornada!
++-----------------------------------------------------------------------+

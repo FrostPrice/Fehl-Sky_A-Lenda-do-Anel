@@ -1,4 +1,7 @@
+#include <unistd.h> // Para poder usar a função sleep
+
 #include "../Headers/Helpers.h"
+#include "../Headers/Sistemas.h"
 #include "../Headers/Player.h"
 #include "../Headers/Caminhos.h"
 #include "../Headers/Inimigo.h"
@@ -7,8 +10,8 @@
 Caminhos::Caminhos()
 {
     caminho_atual = 1;
-    int index_caminhos_possiveis[14][3];
-    string caminhos_possiveis[14];
+    int index_caminhos_possiveis[16][3];
+    string caminhos_possiveis[16];
 };
 
 // Métodos
@@ -23,34 +26,50 @@ void Caminhos::historia(Player jogador)
         // Adicionar combate contra os bosses e inimigos aleatórios
         Inimigo inimigo;
 
-        // Bosses
+        // Eventos para os caminhos
         switch (caminho_atual)
         {
         case 4:
             inimigo.spawnar_mago();
-            combate.combate(jogador, inimigo);
+            combate.combate(jogador, inimigo, false);
 
             break;
         case 6:
             inimigo.spawnar_ladrao_de_tumulos();
-            combate.combate(jogador, inimigo);
+            combate.combate(jogador, inimigo, false);
+
             break;
         case 10:
             inimigo.spawnar_bandido_chefe();
-            combate.combate(jogador, inimigo);
+            combate.combate(jogador, inimigo, false);
+
             break;
         case 13:
             inimigo.spawnar_chefao_final();
-            combate.combate(jogador, inimigo);
+            combate.combate(jogador, inimigo, false);
+
+            break;
+        default: // Define evento aleatório
+            int valor_dado = Sistemas::roda_d20(jogador.get_sorte());
+
+            if (valor_dado >= 16)
+            {
+                inimigo.spawnar_inimigo_aleatorio();
+                combate.combate(jogador, inimigo, true);
+            }
             break;
         }
 
-    } while (caminho_atual > 0 && caminho_atual <= 14);
+        if (jogador.get_vitalidade() <= 0 && caminho_atual > 0 && caminho_atual != 15 && caminho_atual != 16) // Jogador morre em algum ponto da história
+        {
+            set_caminho_atual(15); // Mostra a tela de morte
+        }
+    } while (caminho_atual > 0 && caminho_atual <= 16);
 };
 
 string Caminhos::pesquisa_caminho_atual()
 {
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < 16; i++)
     {
         int index_local;
         index_local = index_caminhos_possiveis[i][0];
@@ -61,7 +80,7 @@ string Caminhos::pesquisa_caminho_atual()
         }
     }
 
-    return caminhos_possiveis[0]; // Para evitar função sem retorno, esse item serve como uma segurança, retornando o jogador pro início da hostória
+    return caminhos_possiveis[0]; // Para evitar função sem retorno, esse item serve como uma segurança, retornando o jogador pro início da história
 };
 
 int Caminhos::define_caminho(int proximo_caminho_1, int proximo_caminho_2)
@@ -100,7 +119,7 @@ int Caminhos::define_caminho(int proximo_caminho_1, int proximo_caminho_2)
 
 void Caminhos::define_proximos_caminhos(int proximos_caminhos[2])
 {
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < 16; i++)
     {
         int index_local;
         index_local = index_caminhos_possiveis[i][0];

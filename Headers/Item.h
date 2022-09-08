@@ -15,16 +15,16 @@ public:
     Item();
 
     // Métodos
-    // TODO: Refatorar
-    void excalibur();
-    void cajado();
-    void arco();
-    void anel();
+    void pocao_cura();
 
     // Getters
     string get_nome()
     {
         return nome;
+    };
+    int get_valor()
+    {
+        return valor;
     };
 
     // Setters

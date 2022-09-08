@@ -58,6 +58,10 @@ public:
     {
         return defesa;
     };
+    Inventario get_inventario()
+    {
+        return inventario;
+    }
 
     // Setters
     void set_nome(string novo_nome)
@@ -68,6 +72,10 @@ public:
     {
         vitalidade = nova_vitalidade;
     };
+    void set_inventario(Inventario novo_inventario)
+    {
+        inventario = novo_inventario;
+    }
 };
 
 #endif // PLAYER_H

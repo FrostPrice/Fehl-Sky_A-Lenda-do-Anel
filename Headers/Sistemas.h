@@ -15,11 +15,11 @@ public:
     // Métodos
     void menu_principal();
     void comeca_jogo();
-    static int roda_d20(int sorte)
+    static int roda_d20(int sorte) // o static permite tornar a função Global sem que haja a necessidade de instanciar a classe, acessada usando NomeClasse::funcão()
     {
         return (rand() % 21) + sorte; // O mod (%) impede que o rand seja = ou > que 21
     };
-    static int compara_dados(int valor_dado_a, int valor_dado_b)
+    static int compara_dados(int valor_dado_a, int valor_dado_b) // o static permite tornar a função Global sem que haja a necessidade de instanciar a classe, acessada usando NomeClasse::funcão()
     {
         if (valor_dado_a > valor_dado_b)
             return 1;

@@ -1,0 +1,12 @@
+[Agradecimento]
+
++-----------------------------------------------------------------------+
+Obrigado por ter jogado!
+
+Esse projeto foi parte do trabalho desenvolvido na Univali de Itajaí por:
+ - Eduardo Moretto
+ - Mateus Barbosa
+ - Matheus Rocha
+
+1. Menu Principal
++-----------------------------------------------------------------------+

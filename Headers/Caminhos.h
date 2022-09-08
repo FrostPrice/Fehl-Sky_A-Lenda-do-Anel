@@ -10,7 +10,7 @@ class Caminhos
 {
 private:
     int caminho_atual;
-    int index_caminhos_possiveis[14][3] = {
+    int index_caminhos_possiveis[16][3] = {
         {1, 2, 0},
         {2, 3, 5},
         {3, 4, 0},
@@ -24,24 +24,28 @@ private:
         {11, 13, 0},
         {12, 13, 0},
         {13, 14, 0},
-        {14, 14, 0},
+        {14, 16, 0},
+        {15, 16, 0},
+        {16, 0, 0},
     };
 
-    string caminhos_possiveis[14] = {
-        "1",            // 1
-        "2",            // 2
-        "3A",           // 3
-        "3ABoss",       // 4
-        "3B",           // 5
-        "3BBoss",       // 6
-        "4A",           // 7
-        "4B",           // 8
-        "4C",           // 9
-        "5A",           // 10
-        "5ABoss",       // 11
-        "5B",           // 12
-        "BatalhaFinal", // 13
-        "Epilogo",      // 14
+    string caminhos_possiveis[16] = {
+        "1",             // 1
+        "2",             // 2
+        "3A",            // 3
+        "3ABoss",        // 4
+        "3B",            // 5
+        "3BBoss",        // 6
+        "4A",            // 7
+        "4B",            // 8
+        "4C",            // 9
+        "5A",            // 10
+        "5ABoss",        // 11
+        "5B",            // 12
+        "BatalhaFinal",  // 13
+        "Epilogo",       // 14
+        "Morte",         // 15
+        "Agradecimento", // 16
     };
 
 public:
