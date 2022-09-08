@@ -1,3 +1,5 @@
+/* Mateus Barbosa, Matheus De Oliveira Rocha, Eduardo Augusto Formigheri Moretto */
+
 #include <locale.h>
 #include <time.h>
 #include <cstdlib> // Para importar rand e srand
