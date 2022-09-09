@@ -24,22 +24,28 @@ void Inimigo::spawnar_inimigo_aleatorio()
         forca = 4;
         stamina = 5;
         inteligencia = 2;
+        dano = 4;
+        defesa = 8;
 
         break;
     case 2:
         nome = "Cleytin";
-        vitalidade = 6;
+        vitalidade = 8;
         forca = 3;
         stamina = 6;
         inteligencia = 10;
+        dano = 2;
+        defesa = 4;
 
         break;
     case 3:
         nome = "Mintus";
-        vitalidade = 6;
+        vitalidade = 8;
         forca = 5;
         stamina = 10;
         inteligencia = 3;
+        dano = 3;
+        defesa = 6;
 
         break;
     };
@@ -52,24 +58,30 @@ void Inimigo::spawnar_mago()
     forca = 3;
     stamina = 6;
     inteligencia = 10;
+    dano = 4;
+    defesa = 6;
 };
 
 void Inimigo::spawnar_ladrao_de_tumulos()
 {
     nome = "Ladrão de Túmulos";
-    vitalidade = 6;
+    vitalidade = 8;
     forca = 4;
     stamina = 10;
     inteligencia = 2;
+    dano = 4;
+    defesa = 4;
 };
 
 void Inimigo::spawnar_bandido_chefe()
 {
     nome = "Rato";
     vitalidade = 10;
-    forca = 5;
+    forca = 4;
     stamina = 2;
     inteligencia = 0;
+    dano = 4;
+    defesa = 8;
 };
 
 void Inimigo::spawnar_golem()
@@ -79,13 +91,17 @@ void Inimigo::spawnar_golem()
     forca = 4;
     stamina = 2;
     inteligencia = 0;
+    dano = 4;
+    defesa = 6;
 };
 
 void Inimigo::spawnar_chefao_final()
 {
     nome = "Fehl Sky";
-    vitalidade = 10;
-    forca = 10;
+    vitalidade = 15;
+    forca = 4;
     stamina = 10;
     inteligencia = 10;
+    dano = 4;
+    defesa = 7;
 };

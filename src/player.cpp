@@ -46,34 +46,34 @@ void Player::criacao_player()
     case 1:
         // Define valores para a classe: Guerreiro
         classe = "Guerreiro";
-        vitalidade = 15;
-        forca = 7;
+        vitalidade = 10;
+        forca = 6;
         stamina = 5;
         inteligencia = 2;
-        dano = 0;
+        dano = 3;
         defesa = 4;
 
         break;
     case 2:
         // Define valores para a classe: Mago
         classe = "Mago";
-        vitalidade = 12;
-        forca = 2;
+        vitalidade = 14;
+        forca = 4;
         stamina = 6;
         inteligencia = 10;
         dano = 2;
-        defesa = 1;
+        defesa = 6;
 
         break;
     case 3:
         // Define valores para a classe: Arqueiro
         classe = "Arqueiro";
-        vitalidade = 13;
+        vitalidade = 15;
         forca = 5;
         stamina = 10;
         inteligencia = 3;
         dano = 3;
-        defesa = 2;
+        defesa = 5;
 
         break;
     default:

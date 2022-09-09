@@ -8,10 +8,10 @@
 
 Combate::Combate(){}; // Só para instanciar essa classe
 
-int Combate::calc_dano(int forca, int dano_arma, int sorte)
+int Combate::calc_dano(int forca, int dano_arma, int sorte, int defesa)
 {
     int dano_final = 0;
-    dano_final = forca + dano_arma;
+    dano_final = forca + dano_arma - defesa / 2;
 
     int chance_critico = Sistemas::roda_d20(sorte);
     if (chance_critico >= 19)
@@ -95,6 +95,8 @@ void Combate::mostrar_status_combate(Player jogador, Inimigo inimigo)
     cout << "| Stamina: " << jogador.get_stamina() << "\t\t|\tStamina: " << inimigo.get_stamina() << endl;
     cout << "| Inteligência: " << jogador.get_inteligencia() << "\t|\tInteligência: " << inimigo.get_inteligencia() << endl;
     cout << "| Sorte: " << jogador.get_sorte() << "\t\t|\tSorte: " << inimigo.get_sorte() << endl;
+    cout << "| Dano: " << jogador.get_dano() << "\t\t|\tDano: " << inimigo.get_dano() << endl;
+    cout << "| Defesa: " << jogador.get_defesa() << "\t\t|\tDefesa: " << inimigo.get_defesa() << endl;
     cout << "+-------------------------------------------------------+\n";
 
     cout << "+-------------------------------------------------------+\n";
@@ -124,7 +126,7 @@ void Combate::atacar(Atancante &atacante, Defensor &defensor) // Necessário pas
         cout << endl;
         break;
     case 1:
-        int dano_final = calc_dano(atacante.get_forca(), atacante.get_dano(), atacante.get_sorte());
+        int dano_final = calc_dano(atacante.get_forca(), atacante.get_dano(), atacante.get_sorte(), defensor.get_defesa());
         defensor.set_vitalidade(defensor.get_vitalidade() - dano_final);
 
         cout << endl;

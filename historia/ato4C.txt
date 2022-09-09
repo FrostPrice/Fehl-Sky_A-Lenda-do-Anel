@@ -1,12 +1,10 @@
 [Xario]
+
 +-----------------------------------------------------------------------+
-
-
 Chegando em Xario Você se depara com uma pequena aldeia, que tinha um velho aldeão que perdeu tudo que tinha
 familia, amigos e tudo mais, ele estava chorando e dizendo que não tinha mais nada, então você se aproxima dele
 e pergunta o que aconteceu, ele diz que um  monstro muito poderoso invadiu a aldeia e matou todos, então você pergunta
 se ele sabe onde estão os monstros, e ele diz que os monstros foram para Atheson e o senhor te mostra o caminho.
 
 1.Ir para Atheson
-
 +-----------------------------------------------------------------------+

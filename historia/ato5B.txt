@@ -1,15 +1,11 @@
 [Atheson]
+
 +-----------------------------------------------------------------------+
+Chegando em Atheson você se depara com o monstro que destriu Xarios, muito conhecido por seu grande poder e sua maldade...
 
-Chegando em Atheson você se depara com o monstro que destriu Xarios, muito conhecido por seu grande poder e sua maldade e quando você derrotar o Golem chamado Nikollay,
-Você encontra a Chave de Tisey e uma Escritura dizendo: 
+Você está tremendo, não sabe se deve enfrentar essa criatura.
 
--A Chave de Tisey é um poderoso item que consegue abrir um portal para um local sagrado chamado Bifrost que é cnohecido pela sua restauração de vida.
-e falava também sobre o Mago Fehl Sky que era um grande mago e onde ele estava.
+Mas lembra da sua missão, seu coração enche de determinação, você segura sua arma com mais força e se prepara.
 
-E Então com essa chave você conseguir ir para Bifrost se curar e estar preparado para qualquer missão.
-
-
-1.Seguir Adiante.
-
+1. Lutar contra o monstro
 +-----------------------------------------------------------------------+

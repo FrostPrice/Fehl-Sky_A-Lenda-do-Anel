@@ -10,7 +10,7 @@ class Combate
 public:
     Combate(); // Só para instanciar essa classe
 
-    int calc_dano(int forca, int dano_arma, int sorte);
+    int calc_dano(int forca, int dano_arma, int sorte, int defesa);
     void combate(Player &jogador, Inimigo inimigo, bool pode_fugir);
     void mostrar_status_combate(Player jogador, Inimigo inimigo);
     template <class Atancante, class Defensor> // Usa template só para definir que as classes são "genéricas"
